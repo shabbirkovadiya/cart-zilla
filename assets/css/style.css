@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter-regular";
+  word-wrap: break-word;
+}
+
+/* =====  Font Family  ===== */
+
+@font-face {
+  font-family: "inter-thin";
+  src: url(../fonts/inter-thin.ttf);
+
+  /*?  Font Weight 100  ?*/
+}
+
+@font-face {
+  font-family: "inter-light";
+  src: url(../fonts/inter-light.ttf);
+
+  /*?  Font Weight 300  ?*/
+}
+
+@font-face {
+  font-family: "inter-regular";
+  src: url(../fonts/inter-regular.ttf);
+
+  /*?  Font Weight 400  ?*/
+}
+
+@font-face {
+  font-family: "inter-medium";
+  src: url(../fonts/inter-medium.ttf);
+
+  /*?  Font Weight 500  ?*/
+}
+@font-face {
+  font-family: "inter-semibold";
+  src: url(../fonts/inter-semibold.ttf);
+
+  /*?  Font Weight 600  ?*/
+}
+
+@font-face {
+  font-family: "inter-bold";
+  src: url(../fonts/inter-bold.ttf);
+}
+  /*?  Font Weight 700  ?*/
+
+  @font-face {
+    font-family: "inter-bold";
+    src: url(../fonts/inter-extrabold.ttf);
+  
+    /*?  Font Weight 800  ?*/
+}
+
+
+/* =====  Basic Code  ===== */
+
+*::selection {
+  background-color: white;
+  color:black;
+}
+
+/* =====  Root Variables  ===== */
+

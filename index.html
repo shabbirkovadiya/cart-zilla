@@ -1,39 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart-zilla</title>
 
-    <!-- =====  Bootstrap CSS  ===== -->
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" />
+<head>
 
-    <!-- =====  Custom CSS  ===== -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartzilla E-Store</title>
 
-    <!-- =====  Font Awesome CSS  ===== -->
-    <link rel="stylesheet" href="assets/fonts/font-awesome/all.min.css" />
+  <!-- =====  Bootstrap CSS  ===== -->
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
 
-    <!-- =====  Swiper Slider CSS  ===== -->
-    <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css" />
+  <!-- =====  Custom CSS  ===== -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- =====  Favicon Image  ===== -->
-    <link rel="website icon" href="assets/images/icons/favicon.svg" />
-  </head>
+  <!-- =====  Font Awesome CSS  ===== -->
+  <link rel="stylesheet" href="assets/fonts/font-awesome/all.min.css">
 
-  <body>
-    <!-- =====  Start Navbar Section  ===== -->
-    
-    
-    <!-- =====  Bootstrap JS  ===== -->
-    <script src="assets/bootstrap/popper.min.js"></script>
-    <script src="assets/bootstrap/bootstrap.min.js"></script>
+  <!-- =====  Swiper Slider CSS  ===== -->
+  <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css">
 
-    <!-- =====  Font Awesome JS  ===== -->
-    <script src="assets/fonts/font-awesome/all.min.js"></script>
+  <!-- =====  Favicon  ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 
-    <!-- =====  Swiper Slider JS  ===== -->
-    <script src="assets/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+</head>
+
+<body>
+
+
+
+  <!-- =====  Start Navbar Section  ===== -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="d-flex align-items-center toggle-btn-div">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerBottomMenu"
+            aria-controls="headerBottomMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa-solid fa-bars"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/Logo.svg" class="d-none d-lg-block" alt="Logo-img">
+            <img src="assets/images/basic-logo.png" class="d-lg-none d-md-block basic-logo" alt="Logo-img">
+          </a>
+        </div>
+        <div class="nav-search d-lg-flex d-none">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search the products">
+        </div>
+        <div class="nav-discount d-flex align-items-center d-lg-flex d-none">
+          <div class="nav-discount-round">%</div>
+          <div class="nav-discount-sub-div">
+            <p>Only this month</p>
+            <h5>Super Sale 20%</h5>
+          </div>
+        </div>
+        <div class="nav-user d-flex align-items-center">
+          <div>
+            <img src="assets/images/icons/moon-icon.svg" alt="">
+          </div>
+          <div class="d-lg-flex d-none">
+            <img src="assets/images/icons/heart-icon.svg" alt="">
+          </div>
+          <div class="d-lg-flex d-none">
+            <img src="assets/images/icons/user-icon.svg" alt="">
+          </div>
+          <div class="d-lg-none d-flex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="cart">
+            <img src="assets/images/icons/cart-icon.svg" alt="">
+            <div class="cart-count">
+              <div class="cart-count-sub-div">
+                3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-bottom collapse d-lg-block" id="headerBottomMenu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <ul class="navbar-nav mb-0">
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-between"
+                  href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="assets/images/icons/category-icon.svg" class="category-icon" alt=""><span
+                    class="mb-0 category-dropdown">Categories</span>
+                  <img src="assets/images/icons/dropdown-icon.svg" class="d-icon" alt="">
+                </a>
+                <div class="dropdown-menu">
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/computer.svg" class="category-list-icon" alt="">
+                      <span>Computers & Accessories</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/smartphone-2.svg" class="category-list-icon" alt="">
+                      <span>Smartphones & Tablets</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/monitor-2.svg" class="category-list-icon" alt="">
+                      <span>TV, Video & Audio</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/speaker.svg" class="category-list-icon" alt="">
+                      <span>Speakers & Home Music</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/camera.svg" class="category-list-icon" alt="">
+                      <span>Cameras, Photo & Video</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/printer.svg" class="category-list-icon" alt="">
+                      <span>Printers & Ink</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/battery.svg" class="category-list-icon" alt="">
+                      <span>Charging Stations</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/headphones.svg" class="category-list-icon" alt="">
+                      <span>Headphones</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/watch.svg" class="category-list-icon" alt="">
+                      <span>Wearable Electronics</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/powerbank.svg" class="category-list-icon" alt="">
+                      <span>Powerbanks</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/hard-drive.svg" class="category-list-icon" alt="">
+                      <span>HDD/SSD Data Storage</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="category-list">
+                    <div>
+                      <img src="assets/images/icons/game.svg" class="category-list-icon" alt="">
+                      <span>Video Games</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Best Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Today’s Deals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="javascript:void(0)">New Arrivals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="javascript:void(0)">Gift Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="javascript:void(0)">Help Center</a>
+              </li>
+            </ul>
+            <div class="nav-language">
+              <ul class="d-flex m-0 p-0">
+                <li class="nav-item dropdown nav-bottom-language">
+                  <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Eng <img src="assets/images/icons/dropdown-icon.svg" class="d-icon" alt="">
+                  </a>
+                  <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="javascript:void(0)">Hindi</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Gujarati</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">Urdu</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown nav-bottom-currency">
+                  <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    USD ($) <img src="assets/images/icons/dropdown-icon.svg" class="d-icon" alt="">
+                  </a>
+                  <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="javascript:void(0)">INR (₹)</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">JPY (¥)</a></li>
+                    <li><a class="dropdown-item" href="javascript:void(0)">SAR (﷼)</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =====  End Navbar Section  ===== -->
+
+
+
+  <!-- =====  Start Banner Section  ===== -->
+
+  <div class="banner-section">
+    <div class="container">
+      <div class="banner">
+        <div class="row">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide d-flex">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                  <div class="banner-sub-div">
+                    <p class="banner-sub-heading">Feel the real quality sound </p>
+                    <h1 class="banner-heading">Headphones <br> ProMax</h1>
+                    <button class="banner-btn">Shop now <img src="assets/images/icons/Icon.svg" alt=""> </button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div>
+                    <img src="assets/images/banner-img1.png" class="banner-img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                  <div class="banner-sub-div">
+                    <p class="banner-sub-heading">Feel the real quality sound </p>
+                    <h1 class="banner-heading">Headphones <br> ProMax</h1>
+                    <button class="banner-btn">Shop now <img src="assets/images/icons/Icon.svg" alt=""> </button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div>
+                    <img src="assets/images/banner-img1.png" class="banner-img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                  <div class="banner-sub-div">
+                    <p class="banner-sub-heading">Feel the real quality sound </p>
+                    <h1 class="banner-heading">Headphones <br> ProMax</h1>
+                    <button class="banner-btn">Shop now <img src="assets/images/icons/Icon.svg" alt=""> </button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div>
+                    <img src="assets/images/banner-img1.png" class="banner-img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                  <div class="banner-sub-div">
+                    <p class="banner-sub-heading">Feel the real quality sound </p>
+                    <h1 class="banner-heading">Headphones <br> ProMax</h1>
+                    <button class="banner-btn">Shop now <img src="assets/images/icons/Icon.svg" alt=""> </button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div>
+                    <img src="assets/images/banner-img1.png" class="banner-img" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide d-flex">
+                <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
+                  <div class="banner-sub-div">
+                    <p class="banner-sub-heading">Feel the real quality sound </p>
+                    <h1 class="banner-heading">Headphones <br> ProMax</h1>
+                    <button class="banner-btn">Shop now <img src="assets/images/icons/Icon.svg" alt=""> </button>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div>
+                    <img src="assets/images/banner-img1.png" class="banner-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====  End Banner Section  ===== -->
+
+
+
+  <!-- =====  Bootstrap JS  ===== -->
+  <script src="assets/bootstrap/popper.min.js"></script>
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
+
+
+
+  <!-- =====  Font Awesome JS  ===== -->
+  <script src="assets/fonts/font-awesome/all.min.js"></script>
+
+
+
+  <!-- =====  Swiper Slider JS  ===== -->
+  <script src="assets/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
 </html>
